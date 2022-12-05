@@ -42,7 +42,7 @@
             this.btn_play.Name = "btn_play";
             this.btn_play.Size = new System.Drawing.Size(71, 37);
             this.btn_play.TabIndex = 1;
-            this.btn_play.Text = "Srart";
+            this.btn_play.Text = "Start";
             this.btn_play.UseVisualStyleBackColor = true;
             this.btn_play.Click += new System.EventHandler(this.PlayButton);
             // 

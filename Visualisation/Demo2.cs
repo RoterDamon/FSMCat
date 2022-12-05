@@ -4,6 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FSMCat;
+using Visualisation.Properties;
 using WinFormAnimation_NET5;
 
 namespace Visualisation
@@ -49,13 +50,15 @@ namespace Visualisation
             while (!token.IsCancellationRequested)
             {
                 _cat.Update();
+                Image image = Resources.Cat;
                 var currentState = _cat.GetState();
                 var reversedPath = PathVault.StayStart;
                 switch (currentState)
                 {
                     case "Sleep":
                         _animator.Paths = PathVault.FromStartToCouch;
-                        reversedPath = PathVault.FromCouchToEat;
+                        reversedPath = PathVault.FromCouchToStart;
+                        image = Resources.CatSleep;
                         break;
                     case "Poop":
                         _animator.Paths = PathVault.FromStartToPoop;
@@ -65,6 +68,9 @@ namespace Visualisation
                         _animator.Paths = PathVault.FromStartToDish;
                         reversedPath = PathVault.FromDishToStart;
                         break;
+                    case "Play":
+                        image = Resources.CatPlay;
+                        break;
                     default:
                         _animator.Paths = PathVault.StayStart;
                         break;
@@ -73,7 +79,12 @@ namespace Visualisation
                 SetText(currentState);
                 _animator.Play(pb_image, Animator2D.KnownProperties.Location);
                 Thread.Sleep(1500);
+                pb_image.Image = image;
+                Thread.Sleep(1500);
+                pb_image.Image = Resources.Cat;
                 _animator.Paths = reversedPath;
+                _animator.Play(pb_image, Animator2D.KnownProperties.Location);
+                Thread.Sleep(1500);
             }
             
             return Task.CompletedTask;
