@@ -10,6 +10,16 @@
         "runtime": {
           "lib/net5.0/WinFormAnimation_NET5.dll": {}
         }
+      },
+      "FSMCat/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/FSMCat.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FSMCat.dll": {}
+        }
       }
     }
   },
@@ -27,10 +37,16 @@
         "winformanimation-net5.2.0.0.nupkg.sha512",
         "winformanimation-net5.nuspec"
       ]
+    },
+    "FSMCat/1.0.0": {
+      "type": "project",
+      "path": "../FSMCat/FSMCat.csproj",
+      "msbuildProject": "../FSMCat/FSMCat.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
+      "FSMCat >= 1.0.0",
       "WinFormAnimation-NET5 >= 2.0.0"
     ]
   },
@@ -51,7 +67,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0-windows"
+        "net5.0-windows7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -60,7 +76,11 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\WAIFU BIG FLOPPA\\RiderProjects\\FSMCat\\FSMCat\\FSMCat.csproj": {
+              "projectPath": "C:\\Users\\WAIFU BIG FLOPPA\\RiderProjects\\FSMCat\\FSMCat\\FSMCat.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -84,8 +104,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -97,7 +116,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
       }
     }
   }

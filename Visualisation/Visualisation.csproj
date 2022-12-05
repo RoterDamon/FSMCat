@@ -25,4 +25,8 @@
       </EmbeddedResource>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\FSMCat\FSMCat.csproj" />
+    </ItemGroup>
+
 </Project>
