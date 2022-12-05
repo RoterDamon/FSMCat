@@ -29,18 +29,20 @@
             this.btn_play = new System.Windows.Forms.Button();
             this.pb_image = new System.Windows.Forms.PictureBox();
             this.roomPictureBox = new System.Windows.Forms.PictureBox();
+            this.stateBox = new System.Windows.Forms.TextBox();
+            this.stateLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_image)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_play
             // 
-            this.btn_play.Location = new System.Drawing.Point(481, 32);
+            this.btn_play.Location = new System.Drawing.Point(475, 32);
             this.btn_play.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_play.Name = "btn_play";
-            this.btn_play.Size = new System.Drawing.Size(35, 37);
+            this.btn_play.Size = new System.Drawing.Size(71, 37);
             this.btn_play.TabIndex = 1;
-            this.btn_play.Text = ">";
+            this.btn_play.Text = "Srart";
             this.btn_play.UseVisualStyleBackColor = true;
             this.btn_play.Click += new System.EventHandler(this.PlayButton);
             // 
@@ -66,25 +68,47 @@
             this.roomPictureBox.TabStop = false;
             this.roomPictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.roomPictureBox_MouseClick);
             // 
+            // stateBox
+            // 
+            this.stateBox.Location = new System.Drawing.Point(475, 110);
+            this.stateBox.Name = "stateBox";
+            this.stateBox.Size = new System.Drawing.Size(125, 27);
+            this.stateBox.TabIndex = 7;
+            // 
+            // stateLabel
+            // 
+            this.stateLabel.AutoSize = true;
+            this.stateLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.stateLabel.Location = new System.Drawing.Point(475, 87);
+            this.stateLabel.Name = "stateLabel";
+            this.stateLabel.Size = new System.Drawing.Size(43, 20);
+            this.stateLabel.TabIndex = 8;
+            this.stateLabel.Text = "State";
+            // 
             // Demo2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.stateLabel);
+            this.Controls.Add(this.stateBox);
             this.Controls.Add(this.pb_image);
             this.Controls.Add(this.btn_play);
             this.Controls.Add(this.roomPictureBox);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Demo2";
-            this.Size = new System.Drawing.Size(538, 492);
+            this.Size = new System.Drawing.Size(611, 492);
             ((System.ComponentModel.ISupportInitialize)(this.pb_image)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomPictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         private System.Windows.Forms.Button btn_play;
         private System.Windows.Forms.PictureBox pb_image;
         private System.Windows.Forms.PictureBox roomPictureBox;
+        private System.Windows.Forms.TextBox stateBox;
+        private System.Windows.Forms.Label stateLabel;
     }
 }

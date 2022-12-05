@@ -28,6 +28,20 @@ namespace Visualisation
             );
         }
 
+        public static readonly Path2D[] StayStart = 
+            new Path2D
+            (
+                new Path(StartPoint.X, StartPoint.X, 200),
+                new Path(StartPoint.Y, StartPoint.Y, 200)
+            ).ContinueTo
+            (
+                new Path2D
+                (
+                    new Path(StartPoint.X, StartPoint.X, 200),
+                    new Path(StartPoint.Y, StartPoint.Y, 200)
+                )
+            );
+        
         public static readonly Path2D[] FromCouchToStart =
             new Path2D
             (
