@@ -1,0 +1,15 @@
+C:\Users\WAIFU BIG FLOPPA\RiderProjects\FSMCat\FSMCat\bin\Debug\net6.0\FSMCat.exe
+C:\Users\WAIFU BIG FLOPPA\RiderProjects\FSMCat\FSMCat\bin\Debug\net6.0\FSMCat.deps.json
+C:\Users\WAIFU BIG FLOPPA\RiderProjects\FSMCat\FSMCat\bin\Debug\net6.0\FSMCat.runtimeconfig.json
+C:\Users\WAIFU BIG FLOPPA\RiderProjects\FSMCat\FSMCat\bin\Debug\net6.0\FSMCat.dll
+C:\Users\WAIFU BIG FLOPPA\RiderProjects\FSMCat\FSMCat\bin\Debug\net6.0\FSMCat.pdb
+C:\Users\WAIFU BIG FLOPPA\RiderProjects\FSMCat\FSMCat\obj\Debug\net6.0\FSMCat.csproj.AssemblyReference.cache
+C:\Users\WAIFU BIG FLOPPA\RiderProjects\FSMCat\FSMCat\obj\Debug\net6.0\FSMCat.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\WAIFU BIG FLOPPA\RiderProjects\FSMCat\FSMCat\obj\Debug\net6.0\FSMCat.AssemblyInfoInputs.cache
+C:\Users\WAIFU BIG FLOPPA\RiderProjects\FSMCat\FSMCat\obj\Debug\net6.0\FSMCat.AssemblyInfo.cs
+C:\Users\WAIFU BIG FLOPPA\RiderProjects\FSMCat\FSMCat\obj\Debug\net6.0\FSMCat.csproj.CoreCompileInputs.cache
+C:\Users\WAIFU BIG FLOPPA\RiderProjects\FSMCat\FSMCat\obj\Debug\net6.0\FSMCat.dll
+C:\Users\WAIFU BIG FLOPPA\RiderProjects\FSMCat\FSMCat\obj\Debug\net6.0\refint\FSMCat.dll
+C:\Users\WAIFU BIG FLOPPA\RiderProjects\FSMCat\FSMCat\obj\Debug\net6.0\FSMCat.pdb
+C:\Users\WAIFU BIG FLOPPA\RiderProjects\FSMCat\FSMCat\obj\Debug\net6.0\FSMCat.genruntimeconfig.cache
+C:\Users\WAIFU BIG FLOPPA\RiderProjects\FSMCat\FSMCat\obj\Debug\net6.0\ref\FSMCat.dll

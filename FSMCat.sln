@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSMCat", "FSMCat\FSMCat.csproj", "{B513083E-A3FC-4ACB-88F2-FB4392E22968}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Visualisation", "Visualisation\Visualisation.csproj", "{A3144ECA-2370-4D76-88B6-674161875B10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B513083E-A3FC-4ACB-88F2-FB4392E22968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B513083E-A3FC-4ACB-88F2-FB4392E22968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B513083E-A3FC-4ACB-88F2-FB4392E22968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B513083E-A3FC-4ACB-88F2-FB4392E22968}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3144ECA-2370-4D76-88B6-674161875B10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3144ECA-2370-4D76-88B6-674161875B10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3144ECA-2370-4D76-88B6-674161875B10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3144ECA-2370-4D76-88B6-674161875B10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,104 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0-windows7.0": {
+      "WinFormAnimation-NET5/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/WinFormAnimation_NET5.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/WinFormAnimation_NET5.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WinFormAnimation-NET5/2.0.0": {
+      "sha512": "xsqrJBJUGVCcdMIAr2gGstpVyiBR2VXvbl8lMTEpCiSQ6xy3WL679tc27nBZoyOgaZQ2Jpi7j8b7WEmPztOtdg==",
+      "type": "package",
+      "path": "winformanimation-net5/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.md",
+        "lib/net5.0/WinFormAnimation_NET5.dll",
+        "winformanimation-net5.2.0.0.nupkg.sha512",
+        "winformanimation-net5.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0-windows7.0": [
+      "WinFormAnimation-NET5 >= 2.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\WAIFU BIG FLOPPA\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\WAIFU BIG FLOPPA\\RiderProjects\\FSMCat\\Visualisation\\Visualisation.csproj",
+      "projectName": "Visualisation",
+      "projectPath": "C:\\Users\\WAIFU BIG FLOPPA\\RiderProjects\\FSMCat\\Visualisation\\Visualisation.csproj",
+      "packagesPath": "C:\\Users\\WAIFU BIG FLOPPA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\WAIFU BIG FLOPPA\\RiderProjects\\FSMCat\\Visualisation\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\WAIFU BIG FLOPPA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0-windows7.0": {
+        "targetAlias": "net5.0-windows",
+        "dependencies": {
+          "WinFormAnimation-NET5": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
