@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Media;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,8 +13,9 @@ namespace Visualisation
     internal partial class Demo2 : UserControl
     {
         private readonly Animator2D _animator = new();
-        private Cat _cat;
+        private readonly SoundPlayer _meowSound = new(Resources.CatMeow);
         private static CancellationTokenSource _tokenSource = new();
+        private Cat _cat;
 
         public Demo2()
         {
@@ -71,6 +73,9 @@ namespace Visualisation
                     case "Play":
                         image = Resources.CatPlay;
                         break;
+                    case "Meow":
+                        _meowSound.Play();
+                        break;
                     default:
                         _animator.Paths = PathVault.StayStart;
                         break;
@@ -107,7 +112,7 @@ namespace Visualisation
 
         private void roomPictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            MessageBox.Show($"{e.Location}");
+            MessageBox.Show($@"{e.Location}");
         }
     }
 }
