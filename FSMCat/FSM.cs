@@ -1,4 +1,6 @@
-﻿namespace FSMCat;
+﻿using System;
+
+namespace FSMCat;
 
 public class FSM
 {
