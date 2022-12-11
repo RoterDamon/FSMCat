@@ -11,6 +11,8 @@ namespace Visualisation
         private static readonly Point DishPoint = new(115, 95);
         private static readonly Point PoopPoint = new(345, 275);
         private static readonly Point EnterPoopPoint = new(315, 230);
+        private static readonly Point YaePoint = new(325, 15);
+        private static readonly Point LoungePoint = new(220, 15);
 
         public static Path2D[] GetPathFromAToB(Point A, Point B)
         {
@@ -28,7 +30,28 @@ namespace Visualisation
             );
         }
 
-        public static readonly Path2D[] StayStart = 
+        public static readonly Path2D[] FromYaeToDish =
+            new Path2D
+            (
+                new Path(YaePoint.X, LoungePoint.X, 200),
+                new Path(YaePoint.Y, YaePoint.Y, 200)
+            ).ContinueTo
+            (
+                new Path2D
+                (
+                    new Path(LoungePoint.X, LoungePoint.X, 200),
+                    new Path(StartPoint.Y, DishPoint.Y, 200)
+                )
+            ).ContinueTo
+            (
+                new Path2D
+                (
+                    new Path(LoungePoint.X, DishPoint.X, 200),
+                    new Path(DishPoint.Y, DishPoint.Y, 200)
+                )
+            );
+
+        public static readonly Path2D[] StayStart =
             new Path2D
             (
                 new Path(StartPoint.X, StartPoint.X, 200),
@@ -41,7 +64,7 @@ namespace Visualisation
                     new Path(StartPoint.Y, StartPoint.Y, 200)
                 )
             );
-        
+
         public static readonly Path2D[] FromCouchToStart =
             new Path2D
             (
@@ -55,7 +78,7 @@ namespace Visualisation
                     new Path(StartPoint.Y, StartPoint.Y, 200)
                 )
             );
-        
+
         public static readonly Path2D[] FromStartToCouch =
             new Path2D
             (

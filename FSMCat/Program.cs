@@ -1,7 +1,4 @@
-﻿using System;
-using System.Threading;
-
-namespace FSMCat
+﻿namespace FSMCat
 {
     public static class Program
     {

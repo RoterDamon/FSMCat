@@ -31,8 +31,10 @@
             this.roomPictureBox = new System.Windows.Forms.PictureBox();
             this.stateBox = new System.Windows.Forms.TextBox();
             this.stateLabel = new System.Windows.Forms.Label();
+            this.yaePictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_image)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yaePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_play
@@ -85,10 +87,21 @@
             this.stateLabel.TabIndex = 8;
             this.stateLabel.Text = "State";
             // 
+            // yaePictureBox
+            // 
+            this.yaePictureBox.Image = global::Visualisation.Properties.Resources.Yae;
+            this.yaePictureBox.Location = new System.Drawing.Point(325, 15);
+            this.yaePictureBox.Name = "yaePictureBox";
+            this.yaePictureBox.Size = new System.Drawing.Size(55, 64);
+            this.yaePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.yaePictureBox.TabIndex = 9;
+            this.yaePictureBox.TabStop = false;
+            // 
             // Demo2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.yaePictureBox);
             this.Controls.Add(this.stateLabel);
             this.Controls.Add(this.stateBox);
             this.Controls.Add(this.pb_image);
@@ -97,9 +110,10 @@
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Demo2";
-            this.Size = new System.Drawing.Size(611, 492);
+            this.Size = new System.Drawing.Size(610, 490);
             ((System.ComponentModel.ISupportInitialize)(this.pb_image)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yaePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,5 +124,6 @@
         private System.Windows.Forms.PictureBox roomPictureBox;
         private System.Windows.Forms.TextBox stateBox;
         private System.Windows.Forms.Label stateLabel;
+        private System.Windows.Forms.PictureBox yaePictureBox;
     }
 }

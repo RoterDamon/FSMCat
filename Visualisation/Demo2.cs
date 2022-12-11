@@ -15,12 +15,16 @@ namespace Visualisation
         private readonly Animator2D _animator = new();
         private readonly SoundPlayer _meowSound = new(Resources.CatMeow);
         private static CancellationTokenSource _tokenSource = new();
+        private static string _previousState = "";
         private Cat _cat;
 
         public Demo2()
         {
             InitializeComponent();
             SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            yaePictureBox.Parent = roomPictureBox;
+            yaePictureBox.BackColor = Color.Transparent;
+            yaePictureBox.BringToFront();
             pb_image.Parent = roomPictureBox;
             pb_image.BackColor = Color.Transparent;
             pb_image.BringToFront();
@@ -52,47 +56,55 @@ namespace Visualisation
             while (!token.IsCancellationRequested)
             {
                 _cat.Update();
-                Image image = Resources.Cat;
                 var currentState = _cat.GetState();
-                var reversedPath = PathVault.StayStart;
-                switch (currentState)
-                {
-                    case "Sleep":
-                        _animator.Paths = PathVault.FromStartToCouch;
-                        reversedPath = PathVault.FromCouchToStart;
-                        image = Resources.CatSleep;
-                        break;
-                    case "Poop":
-                        _animator.Paths = PathVault.FromStartToPoop;
-                        reversedPath = PathVault.FromPoopToStart;
-                        break;
-                    case "GoToKitchen":
-                        _animator.Paths = PathVault.FromStartToDish;
-                        reversedPath = PathVault.FromDishToStart;
-                        break;
-                    case "Play":
-                        image = Resources.CatPlay;
-                        break;
-                    case "Meow":
-                        _meowSound.Play();
-                        break;
-                    default:
-                        _animator.Paths = PathVault.StayStart;
-                        break;
-                }
-                
                 SetText(currentState);
-                _animator.Play(pb_image, Animator2D.KnownProperties.Location);
-                Thread.Sleep(1500);
-                pb_image.Image = image;
-                Thread.Sleep(1500);
-                pb_image.Image = Resources.Cat;
-                _animator.Paths = reversedPath;
-                _animator.Play(pb_image, Animator2D.KnownProperties.Location);
-                Thread.Sleep(1500);
+                AnimateCat(currentState);
+                _previousState = currentState;
             }
             
             return Task.CompletedTask;
+        }
+
+        private void AnimateCat(string currentState)
+        {
+            Image image = Resources.Cat;
+            var reversedPath = PathVault.StayStart;
+
+            switch (currentState)
+            {
+                case "Sleep":
+                    _animator.Paths = PathVault.FromStartToCouch;
+                    reversedPath = PathVault.FromCouchToStart;
+                    image = Resources.CatSleep;
+                    break;
+                case "Poop":
+                    _animator.Paths = PathVault.FromStartToPoop;
+                    reversedPath = PathVault.FromPoopToStart;
+                    break;
+                case "Eat":
+                case "GoToKitchen":
+                    _animator.Paths = PathVault.FromStartToDish;
+                    reversedPath = PathVault.FromDishToStart;
+                    break;
+                case "Play":
+                    image = Resources.CatPlay;
+                    break;
+                case "Meow":
+                    _meowSound.Play();
+                    break;
+                default:
+                    _animator.Paths = PathVault.StayStart;
+                    break;
+            }
+            
+            _animator.Play(pb_image, Animator2D.KnownProperties.Location);
+            Thread.Sleep(1500);
+            pb_image.Image = image;
+            Thread.Sleep(1500);
+            pb_image.Image = Resources.Cat;
+            _animator.Paths = reversedPath;
+            _animator.Play(pb_image, Animator2D.KnownProperties.Location);
+            Thread.Sleep(1500);
         }
         
         private delegate void SetTextCallback(string text);
