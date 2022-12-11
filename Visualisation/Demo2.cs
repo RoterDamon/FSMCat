@@ -33,6 +33,7 @@ namespace Visualisation
             var hungry = 10;
             var poop = 100;
             _cat = new Cat(tired, hungry, poop);
+            roomPictureBox.Image = _cat.GetFood() ? Resources.RoomWithFood : Resources.RoomWithoutFood;
         }
 
         private async void PlayButton(object sender, EventArgs e)
@@ -76,6 +77,7 @@ namespace Visualisation
             var reversedPath = PathVault.FromDishToYae;
             _animator.Play(yaePictureBox, Animator2D.KnownProperties.Location);
             Thread.Sleep(1500);
+            roomPictureBox.Image = Resources.RoomWithFood;
             _animator.Paths = reversedPath;
             _animator.Play(yaePictureBox, Animator2D.KnownProperties.Location);
             Thread.Sleep(1500);
@@ -98,9 +100,13 @@ namespace Visualisation
                     reversedPath = PathVault.FromPoopToStart;
                     break;
                 case "Eat":
+                    _animator.Paths = PathVault.StayDish;
+                    reversedPath = PathVault.FromDishToStart;
+                    roomPictureBox.Image = Resources.RoomWithoutFood;
+                    break;
                 case "GoToKitchen":
                     _animator.Paths = PathVault.FromStartToDish;
-                    reversedPath = PathVault.FromDishToStart;
+                    reversedPath = _cat.GetFood() ? PathVault.StayDish : PathVault.FromDishToStart;
                     break;
                 case "Play":
                     image = Resources.CatPlay;

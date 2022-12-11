@@ -20,6 +20,8 @@ public class Cat
 
     public string GetState() => _brain.GetStateName();
 
+    public bool GetFood() => _food;
+
     private void Start()
     {
         if (_tired < 7)

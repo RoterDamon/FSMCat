@@ -30,6 +30,20 @@ namespace Visualisation
             );
         }
         
+        public static readonly Path2D[] StayDish =
+            new Path2D
+            (
+                new Path(DishPoint.X, DishPoint.X, 200),
+                new Path(DishPoint.Y, DishPoint.Y, 200)
+            ).ContinueTo
+            (
+                new Path2D
+                (
+                    new Path(DishPoint.X, DishPoint.X, 200),
+                    new Path(DishPoint.Y, DishPoint.Y, 200)
+                )
+            );
+        
         public static readonly Path2D[] StayYae =
             new Path2D
             (

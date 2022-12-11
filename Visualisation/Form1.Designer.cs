@@ -48,14 +48,14 @@
             // 
             // topPanel
             // 
-            this.topPanel.BackColor = System.Drawing.Color.MidnightBlue;
+            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(190)))), ((int)(((byte)(48)))));
             this.topPanel.Controls.Add(this.label1);
             this.topPanel.Controls.Add(this.button2);
             this.topPanel.Controls.Add(this.hideForm);
             this.topPanel.Location = new System.Drawing.Point(0, -1);
             this.topPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(754, 49);
+            this.topPanel.Size = new System.Drawing.Size(604, 49);
             this.topPanel.TabIndex = 4;
             this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MakeDragable);
             this.topPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DragForm);
@@ -68,16 +68,17 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(3, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(284, 29);
+            this.label1.Size = new System.Drawing.Size(206, 29);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Robot Vacuum Cleaner";
+            this.label1.Text = "Robot CAT 2077";
             // 
             // button2
             // 
+            this.button2.BackgroundImage = global::Visualisation.Properties.Resources.icons8_delete_64px;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button2.Location = new System.Drawing.Point(713, 4);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(190)))), ((int)(((byte)(48)))));
+            this.button2.Location = new System.Drawing.Point(560, 3);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(38, 44);
@@ -87,10 +88,11 @@
             // 
             // hideForm
             // 
+            this.hideForm.BackgroundImage = global::Visualisation.Properties.Resources.icons8_subtract_64px;
             this.hideForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.hideForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hideForm.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.hideForm.Location = new System.Drawing.Point(668, 4);
+            this.hideForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(190)))), ((int)(((byte)(48)))));
+            this.hideForm.Location = new System.Drawing.Point(515, 3);
             this.hideForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.hideForm.Name = "hideForm";
             this.hideForm.Size = new System.Drawing.Size(38, 44);
@@ -103,7 +105,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(754, 573);
+            this.ClientSize = new System.Drawing.Size(604, 539);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.demo21);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

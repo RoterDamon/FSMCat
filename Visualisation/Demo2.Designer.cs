@@ -61,7 +61,7 @@
             // 
             // roomPictureBox
             // 
-            this.roomPictureBox.Image = global::Visualisation.Properties.Resources.RoomWithEat;
+            this.roomPictureBox.Image = global::Visualisation.Properties.Resources.RoomWithFood;
             this.roomPictureBox.Location = new System.Drawing.Point(0, 0);
             this.roomPictureBox.Name = "roomPictureBox";
             this.roomPictureBox.Size = new System.Drawing.Size(445, 443);
