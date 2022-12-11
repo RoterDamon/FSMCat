@@ -29,6 +29,49 @@ namespace Visualisation
                 )
             );
         }
+        
+        public static readonly Path2D[] StayYae =
+            new Path2D
+            (
+                new Path(YaePoint.X - 40, YaePoint.X - 40, 200),
+                new Path(YaePoint.Y, YaePoint.Y, 200)
+            ).ContinueTo
+            (
+                new Path2D
+                (
+                    new Path(YaePoint.X - 40, YaePoint.X - 40, 200),
+                    new Path(YaePoint.Y, YaePoint.Y, 200)
+                )
+            );
+
+        public static readonly Path2D[] FromStartToYae =
+            new Path2D
+            (
+                new Path(StartPoint.X, StartPoint.X, 200),
+                new Path(StartPoint.Y, YaePoint.Y, 200)
+            ).ContinueTo
+            (
+                new Path2D
+                (
+                    new Path(StartPoint.X, YaePoint.X - 40, 200),
+                    new Path(YaePoint.Y, YaePoint.Y, 200)
+                )
+            );
+
+        public static readonly Path2D[] FromYaeToStart =
+            new Path2D
+            (
+                new Path(YaePoint.X - 40, StartPoint.X, 200),
+                new Path(YaePoint.Y, YaePoint.Y, 200)
+            ).ContinueTo
+            (
+                new Path2D
+                (
+                    new Path(StartPoint.X, StartPoint.X, 200),
+                    new Path(YaePoint.Y, StartPoint.Y, 200)
+                )
+            );
+
 
         public static readonly Path2D[] FromYaeToDish =
             new Path2D
@@ -40,7 +83,7 @@ namespace Visualisation
                 new Path2D
                 (
                     new Path(LoungePoint.X, LoungePoint.X, 200),
-                    new Path(StartPoint.Y, DishPoint.Y, 200)
+                    new Path(LoungePoint.Y, DishPoint.Y, 200)
                 )
             ).ContinueTo
             (
@@ -48,6 +91,27 @@ namespace Visualisation
                 (
                     new Path(LoungePoint.X, DishPoint.X, 200),
                     new Path(DishPoint.Y, DishPoint.Y, 200)
+                )
+            );
+
+        public static readonly Path2D[] FromDishToYae =
+            new Path2D
+            (
+                new Path(DishPoint.X, LoungePoint.X, 200),
+                new Path(DishPoint.Y, DishPoint.Y, 200)
+            ).ContinueTo
+            (
+                new Path2D
+                (
+                    new Path(LoungePoint.X, LoungePoint.X, 200),
+                    new Path(DishPoint.Y, LoungePoint.Y, 200)
+                )
+            ).ContinueTo
+            (
+                new Path2D
+                (
+                    new Path(LoungePoint.X, YaePoint.X, 200),
+                    new Path(LoungePoint.Y, LoungePoint.Y, 200)
                 )
             );
 

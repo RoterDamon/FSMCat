@@ -57,12 +57,28 @@ namespace Visualisation
             {
                 _cat.Update();
                 var currentState = _cat.GetState();
+
+                if (_previousState == "Meow" && currentState == "GoToKitchen")
+                {
+                    AnimateYae();
+                }
                 SetText(currentState);
                 AnimateCat(currentState);
                 _previousState = currentState;
             }
             
             return Task.CompletedTask;
+        }
+
+        private void AnimateYae()
+        {
+            _animator.Paths = PathVault.FromYaeToDish;
+            var reversedPath = PathVault.FromDishToYae;
+            _animator.Play(yaePictureBox, Animator2D.KnownProperties.Location);
+            Thread.Sleep(1500);
+            _animator.Paths = reversedPath;
+            _animator.Play(yaePictureBox, Animator2D.KnownProperties.Location);
+            Thread.Sleep(1500);
         }
 
         private void AnimateCat(string currentState)
@@ -89,8 +105,14 @@ namespace Visualisation
                 case "Play":
                     image = Resources.CatPlay;
                     break;
+                case "Search":
+                    _animator.Paths = PathVault.FromStartToYae;
+                    reversedPath = PathVault.StayYae;
+                    break;
                 case "Meow":
                     _meowSound.Play();
+                    _animator.Paths = PathVault.StayYae;
+                    reversedPath = PathVault.FromYaeToStart;
                     break;
                 default:
                     _animator.Paths = PathVault.StayStart;
